@@ -1,0 +1,48 @@
+{
+  "name": "react-static-plugin-localized",
+  "description": "A React-Static plugin that adds support for creating language specific routes with localized data",
+  "main": "node.api.js",
+  "author": "Richard Wohlgemuth",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "babel src --out-dir .",
+    "clean": "rm -f node.api.js && rm -f routeBuilder.js",
+    "test": "jest",
+    "test-watch": "jest --watch",
+    "coverage": "jest --coverage",
+    "lint": "eslint {src,tests}{/*,/**/*}.js",
+    "lint-fix": "eslint --fix {src,tests}{/*,/**/*}.js",
+    "preversion": "npm run test",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/richardw0l/react-static-plugin-localized.git"
+  },
+  "dependencies": {
+    "lodash": "4.17.21",
+    "glob-parent": "5.1.2"
+  },
+  "peerDependencies": {
+    "react-static": "^7.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.8.4",
+    "@babel/core": "7.9.0",
+    "@babel/preset-env": "7.9.0",
+    "eslint": "6.8.0",
+    "eslint-config-airbnb-base": "14.1.0",
+    "eslint-plugin-import": "2.20.1",
+    "jest": "25.2.0"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "files": [
+    "node.api.js",
+    "routeBuilder.js"
+  ]
+}
